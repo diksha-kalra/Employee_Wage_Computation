@@ -1,3 +1,7 @@
+// This code computes the daily wages of employees who are present.
+// If the employee is present the working hrs are 8hrs.
+// daily_emp_wage=emp_hours*WAGE_PER_HOUR   ------ this formula is used for wage calculation.
+
 package emp;
 
 public class empwage {
