@@ -9,13 +9,13 @@ public class empwage {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
-		//Checking if employee present or not
+		
 		
 		//Variable
 		int emp_hours=0;
 		int monthly_wage=0;
 		int emp_check = (int)Math.floor(Math.random()*10)%3;
-		//checking condition
+		//Using switch case to determine employee is full time or part time
 		switch(emp_check) {
 			case IS_FULL_TIME :
 				System.out.println("Employee is full time");
@@ -28,7 +28,7 @@ public class empwage {
 			default :
 				emp_hours=0;
 		}
-		
+		//Computing monthly wage of employee 
 		monthly_wage= emp_hours*WAGE_PER_HOUR*WORKING_DAY_PER_MONTH;
 		System.out.println("Monthly Employee Wage -"+monthly_wage);
 	}
