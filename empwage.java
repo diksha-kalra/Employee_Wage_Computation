@@ -1,3 +1,8 @@
+// This code computes the wages of full time and part time employee depending on the conditions of maximum 100hrs and 20 days a month.
+// For full time employee the no. of hrs per day is 8hrs and for part time it's 4hrs.
+// For full time employee as the number of hrs that is 100 is easily achievable in a month hence it is used for wage calculation.
+// For part time as it is not possible to work for 100 hrs a month hence 20 days a month is used for wage calculation.
+
 package emp;
 
 public class empwage {
