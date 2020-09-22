@@ -5,9 +5,10 @@ public class empwage {
 		System.out.println("Welcome to Employee Wage Computation Program");
 		//Constant
 		int IS_PRESENT =1;
-		//Checking if employee present or not
+		
 		double emp_check = Math.floor(Math.random()*10)%2;
-		//checking condition
+		
+		//Checking whether employee is present or not 
 		if(emp_check == IS_PRESENT) {
 			System.out.println("Employee Present");
 		}
