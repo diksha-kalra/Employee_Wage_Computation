@@ -8,13 +8,13 @@ public class empwage {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
-		//Checking if employee present or not
+		
 		
 		//Variable
 		int emp_hours=0;
 		int daily_emp_wage=0;
 		int emp_check = (int)Math.floor(Math.random()*10)%3;
-		//checking condition
+		//Applying switch case to check whether employee is full time or part time
 		switch(emp_check) {
 			case IS_FULL_TIME :
 				System.out.println("Employee is full time");
@@ -27,7 +27,7 @@ public class empwage {
 			default :
 				emp_hours=0;
 		}
-		
+		//Calculating the daily wage of employee
 		daily_emp_wage=emp_hours*WAGE_PER_HOUR;
 		System.out.println("Daily Employee Wage -"+daily_emp_wage);
 	}
