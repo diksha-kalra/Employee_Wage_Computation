@@ -1,3 +1,6 @@
+// This code computes the monthly wages of part time and full time employees.
+// full time employee work for 8hrs per day and part time works for 4hrs/day.
+// A general formula ---- monthly_wage= emp_hours*WAGE_PER_HOUR*WORKING_DAY_PER_MONTH is used for wage calculation. 
 package emp;
 
 public class empwage {
@@ -23,7 +26,7 @@ public class empwage {
 				break;
 			case IS_PART_TIME : 
 				System.out.println("Employee is part time");
-				emp_hours=8;
+				emp_hours=4;
 				break;
 			default :
 				emp_hours=0;
