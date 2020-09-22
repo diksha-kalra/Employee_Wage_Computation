@@ -2,8 +2,7 @@ package emp;
 
 public class empwage {
 	//Constant
-	public static final int IS_FULL_TIME =1;
-	public static final int IS_PART_TIME=2;
+	public static final int IS_PRESENT =1;
 	public static final int WAGE_PER_HOUR=20;
 	
 	public static void main(String[] args) {
@@ -13,14 +12,10 @@ public class empwage {
 		//Variable
 		int emp_hours=0;
 		int daily_emp_wage=0;
-		double emp_check = Math.floor(Math.random()*10)%3;
+		double emp_check = Math.floor(Math.random()*10)%2;
 		//checking condition
-		if(emp_check == IS_FULL_TIME) {
-			System.out.println("Employee is full time");
-			emp_hours=8;
-		}
-		else if (emp_check == IS_PART_TIME) {
-			System.out.println("Employee is part-time");
+		if(emp_check == IS_PRESENT) {
+			System.out.println("Employee Present");
 			emp_hours=8;
 		}
 		else {
