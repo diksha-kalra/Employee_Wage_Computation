@@ -1,3 +1,7 @@
+// This code computes the daily wages of full time and part time employee and uses the switch statement for determing the employees.
+// Full time emp works for 8hrs/day and part time emp works for 4hrs/day.
+// daily_emp_wage=emp_hours*WAGE_PER_HOUR   ------ this formula is used for wage calculation.
+
 package emp;
 
 public class empwage {
