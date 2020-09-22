@@ -1,3 +1,6 @@
+// This code determines whether an employee is present or absent. 
+// Here Math.random is used for generation of random number.
+
 package emp;
 
 public class empwage {
