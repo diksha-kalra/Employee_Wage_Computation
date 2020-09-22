@@ -7,13 +7,12 @@ public class empwage {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
-		//Checking if employee present or not
-		
 		//Variable
 		int emp_hours=0;
 		int daily_emp_wage=0;
 		double emp_check = Math.floor(Math.random()*10)%2;
-		//checking condition
+		
+		//Checking if employee present or not
 		if(emp_check == IS_PRESENT) {
 			System.out.println("Employee Present");
 			emp_hours=8;
@@ -22,6 +21,7 @@ public class empwage {
 			System.out.println("Employee Absent");
 			emp_hours=0;
 		}
+		//Calculating the daily wages depending upon employee present or not 
 		daily_emp_wage=emp_hours*WAGE_PER_HOUR;
 		System.out.println("Daily Employee Wage -"+daily_emp_wage);
 	}
