@@ -1,3 +1,13 @@
+// This codes do the following functionalities
+// 1) print welcome message
+// 2) checks whether emp. is present or not
+// 3) determines wages of full time and part time emp.
+// 4) determines daily and monthly wages 
+// 5) provides swtich case functionality along with if else 
+// 6) computes wages on the basis of conditions
+
+
+
 package emp;
 
 public class empwage {
