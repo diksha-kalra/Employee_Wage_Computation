@@ -8,13 +8,14 @@ public class empwage {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
-		//Checking if employee present or not
+		
 		
 		//Variable
 		int emp_hours=0;
 		int daily_emp_wage=0;
 		double emp_check = Math.floor(Math.random()*10)%3;
-		//checking condition
+		
+		//Checking whether employee is full time or partime
 		if(emp_check == IS_FULL_TIME) {
 			System.out.println("Employee is full time");
 			emp_hours=8;
@@ -27,6 +28,7 @@ public class empwage {
 			System.out.println("Employee absent");
 			emp_hours=0;
 		}
+		//Calculating the wage of employee
 		daily_emp_wage=emp_hours*WAGE_PER_HOUR;
 		System.out.println("Daily Employee Wage -"+daily_emp_wage);
 	}
