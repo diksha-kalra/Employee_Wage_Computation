@@ -26,7 +26,7 @@ public class empwage {
 				break;
 			case IS_PART_TIME : 
 				System.out.println("Employee is part time");
-				emp_hours=8;
+				emp_hours=4;
 				break;
 			default :
 				emp_hours=0;
