@@ -1,13 +1,3 @@
-// This codes do the following functionalities
-// 1) print welcome message
-// 2) checks whether emp. is present or not
-// 3) determines wages of full time and part time emp.
-// 4) determines daily and monthly wages 
-// 5) provides swtich case functionality along with if else 
-// 6) computes wages on the basis of conditions
-
-
-
 package emp;
 
 public class empwage {
@@ -43,45 +33,35 @@ public class empwage {
 //		int monthly_wage=0; //use this variable when computing monthly wage
 		int emp_wage=0;
 		
-		double emp_check = Math.floor(Math.random()*10)%3;
-		
-		//Checking whether employee is full time or part time 
-		if(emp_check == IS_FULL_TIME) {
+		int emp_check = (int) Math.floor(Math.random()*10)%3;
+
+		switch(emp_check) {
+		case IS_FULL_TIME :
 			System.out.println("Employee is full time");
 			emp_hours=8;
-			emp_wage=TOTAL_WORKING_HRS*WAGE_PER_HOUR; // when using 100hrs for wage calc. where 100hrs is max hrs full time emp. can work for in a month
-			System.out.println("Full Time Employee Wage "+ emp_wage);// when using above condn then use this print statement
-		}
-		else if (emp_check== IS_PART_TIME) {
+			if(emp_hours*TOTAL_WORKING_DAYS>=TOTAL_WORKING_HRS) {
+				emp_wage=TOTAL_WORKING_HRS*WAGE_PER_HOUR;
+			}
+			else {
+				emp_wage=TOTAL_WORKING_DAYS*emp_hours*WAGE_PER_HOUR;
+			}
+			break;
+		case IS_PART_TIME : 
 			System.out.println("Employee is part time");
 			emp_hours=4;
-			emp_wage=TOTAL_WORKING_DAYS*emp_hours*WAGE_PER_HOUR;// when using 20 days as the number of total working days a month for employee
-			System.out.println("Part Time Employee Wage "+ emp_wage);// use this statement to print when using above statement
-			
-		}
-		
-		else {
+			if(emp_hours*TOTAL_WORKING_DAYS>=TOTAL_WORKING_HRS) {
+				emp_wage=TOTAL_WORKING_HRS*WAGE_PER_HOUR;
+			}
+			else {
+				emp_wage=TOTAL_WORKING_DAYS*emp_hours*WAGE_PER_HOUR;
+			}
+			break;
+		default :
 			System.out.println("Employee absent");
 			emp_hours=0;
-		}
-// using switch statements
-//		//Variable
-//		int emp_hours=0;
-//		int daily_emp_wage=0;
-//		int emp_check = (int)Math.floor(Math.random()*10)%3;
-//		//Applying switch case to check whether employee is full time or part time
-//		switch(emp_check) {
-//			case IS_FULL_TIME :
-//				System.out.println("Employee is full time");
-//				emp_hours=8;
-//				break;
-//			case IS_PART_TIME : 
-//				System.out.println("Employee is part time");
-//				emp_hours=4;
-//				break;
-//			default :
-//				emp_hours=0;
-//		}
+	}
+		
+		System.out.println("Employee Wage "+ emp_wage);
 		
 		//Calculating the daily wage of employee
 
