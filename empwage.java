@@ -5,36 +5,14 @@ public class empwage {
 	public static final int IS_FULL_TIME =1;
 	public static final int IS_PART_TIME=2;
 	public static final int WAGE_PER_HOUR=20;
-	public static final int WORKING_DAY_PER_MONTH=20;
 	public static final int TOTAL_WORKING_HRS=100;
 	public static final int TOTAL_WORKING_DAYS=20;
-	//public static final int IS_PRESENT =1;  // use for checking emp present or not 
-		
 	
-	public static void main(String[] args) {
-		System.out.println("Welcome to Employee Wage Computation Program");
-
-		// To check whether employee is present or not
- 		
-//		double emp_check = Math.floor(Math.random()*10)%2;
-//		
-//		//Checking whether employee is present or not 
-//		if(emp_check == IS_PRESENT) {
-//			System.out.println("Employee Present");
-//		}
-//		else {
-//			System.out.println("Employee Absent");
-//		}
-//		
-			
-		//Variable
-		int emp_hours=0; 
-//		int daily_emp_wage=0; //use this variable when computing daily wage
-//		int monthly_wage=0; //use this variable when computing monthly wage
+	//method to compute the employee wages
+	public static int empWageCalculation(int emp_check) {
+		int emp_hours=0;
 		int emp_wage=0;
 		
-		int emp_check = (int) Math.floor(Math.random()*10)%3;
-
 		switch(emp_check) {
 		case IS_FULL_TIME :
 			System.out.println("Employee is full time");
@@ -58,24 +36,23 @@ public class empwage {
 			break;
 		default :
 			System.out.println("Employee absent");
-			emp_hours=0;
-	}
-		
-		System.out.println("Employee Wage "+ emp_wage);
-		
-		//Calculating the daily wage of employee
-
-//		daily_emp_wage=emp_hours*WAGE_PER_HOUR;
-//		System.out.println("Daily Employee Wage -"+daily_emp_wage);
-
-		
-		//Computing monthly wage of employee 
-//		monthly_wage= emp_hours*WAGE_PER_HOUR*WORKING_DAY_PER_MONTH;
-//		System.out.println("Monthly Employee Wage -"+monthly_wage);
-
-
+			emp_wage=0;
 		}
 		
-
+		return emp_wage;
 	}
+	
+	public static void main(String[] args) {
+		System.out.println("Welcome to Employee Wage Computation Program");
+		
+		//Generating random number to determine type of object
+		int type_of_emp = (int) Math.floor(Math.random()*10)%3;
+		
+		//Calling the static method which computes employee wage
+		int emp_wage=empwage.empWageCalculation(type_of_emp);
+		System.out.println("Employee Wage for a month: "+ emp_wage);
+		
+	}
+
+}
 
