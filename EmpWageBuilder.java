@@ -64,7 +64,16 @@ public class EmpWageBuilder {
 	}
 		return total_hrs*company.getEmp_wage_per_hr();
 	}
+	
+		public void PrintQueryDetails(String company_name){
+		for(int i = 0; i < company_emp_wage.size(); i++){
+			CompanyEmpWage p = (CompanyEmpWage)company_emp_wage.get(i);
+         	if(company_name.equals(p.getCompany_name())){
+        		System.out.println("Total Wage of "+p.getCompany_name()+" is "+p.getTotal_emp_wage());
+         	}
+	
 	}
-
+		}
+}
 	
 		
