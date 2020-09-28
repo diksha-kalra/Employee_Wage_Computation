@@ -1,6 +1,6 @@
 package emp;
 
-public class EmpWage {
+public class EmpWageBuilder {
 	//constant
 	public static final int IS_FULL_TIME =1;
 	public static final int IS_PART_TIME=2;
@@ -12,13 +12,15 @@ public class EmpWage {
 	private int emp_hrs_per_day;
 	private String company_name;
 	
-	public EmpWage(int emp_wage_per_hr, int working_day_per_month, int working_hrs_per_month, String company_name) {
+	//Constructor of EmpWage
+	public EmpWageBuilder(int emp_wage_per_hr, int working_day_per_month, int working_hrs_per_month, String company_name) {
 		this.company_name=company_name;
 		this.emp_wage_per_hr=emp_wage_per_hr;
 		this.working_hrs_per_month=working_hrs_per_month;
 		this.working_day_per_month=working_day_per_month;
 	}
 	
+	//Method to compute Company Wage
 	public int CompanyWage() {
 		int total_hrs=0;
 		int total_working_days=0;
@@ -45,10 +47,19 @@ public class EmpWage {
 	}
 	
 	public static void main(String[] args) {
-		EmpWage capgemini=new EmpWage(50,20,100,"Capgemini");
-		EmpWage IBM=new EmpWage(40,28,90,"IBM");
-		System.out.println("Total Employee wage for Capgemini comapny is "+capgemini.CompanyWage());
-		System.out.println("Total Employee wage for IBM comapny is "+IBM.CompanyWage());
+		
+		//Employee Wage Builder for company1
+		EmpWageBuilder capgemini=new EmpWageBuilder(50,20,100,"Capgemini");
+		
+		//Employee Wage Builder for company2
+		EmpWageBuilder IBM=new EmpWageBuilder(40,28,90,"IBM");
+		
+		//Employee Wage Builder for company3
+		EmpWageBuilder Accenture=new EmpWageBuilder(70,30,110,"Accenture");
+		
+		System.out.println("Total Employee wage for "+capgemini.company_name+" comapny is "+capgemini.CompanyWage());
+		System.out.println("Total Employee wage for "+IBM.company_name+" comapny is "+IBM.CompanyWage());
+		System.out.println("Total Employee wage for "+Accenture.company_name+" comapny is "+Accenture.CompanyWage());
 	}
 	
 }
