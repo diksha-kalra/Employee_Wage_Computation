@@ -1,6 +1,7 @@
 package emp;
 
-public class EmpWageBuilder {
+
+public class EmpWageBuilder implements ComputeEmpWage{
 	//constant
 	public static final int IS_FULL_TIME =1;
 	public static final int IS_PART_TIME=2;
@@ -27,7 +28,7 @@ public class EmpWageBuilder {
 	}
 	
 	//Method to compute Company Wage
-	private int computeEmpWage(CompanyEmpWage companyEmpWage) {
+	public int computeEmpWage(CompanyEmpWage companyEmpWage) {
 		int emp_hrs_per_day;
 		int total_hrs=0;
 		int total_working_days=0;
